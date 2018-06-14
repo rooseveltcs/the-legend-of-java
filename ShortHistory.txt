@@ -1,0 +1,25 @@
+This may be a surprise to you, but the Trinity War has been going on since the beginning mankind.
+Before humans banded together according to race, religion etc, they were seperated by 3 major factions.
+The Seez, The Fangs and The Javas.
+Each faction was in constant competition with one another.
+Before mankind had really evolved, they fought over basic things.
+Land...
+Food...
+People...
+But as time went on and humans progressed intellectually, they fought for greater things.
+Glory...
+Recognition...
+Influence...
+Since the birth of each factions, the leadership position has been passed down when one leader dies, unto the next.
+That has kept each faction alive.
+But like all things, time has distorted which faction is which, and so they have taken many names over the years.
+In our this current age, these factions control major companies, and fight for influence.
+Google, Microsoft and Amazon.
+Target, Walmart and Costco.
+These are but a few instances of the orignal factions battling one another.
+Now the Trinity war has branched out into the computer science field.
+The Seez hope to spread the C++ Programming Language around the world.
+The Fangs work to push the programming language titled "Python".
+My creators, the Java Overlords have programmed me to teach potential coding gods the basics of the Java Language.
+We NEED your help, and thankfully, you've decided to give it.
+Choose a door:
