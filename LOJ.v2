@@ -1,0 +1,43 @@
+import java.io.*;
+import java.awt.*;
+import java.util.*;
+import java.awt.event.*;
+import java.awt.event.ActionEvent.*;
+import java.awt.event.ActionListener.*;
+import java.awt.event.KeyEvent.*;
+import java.awt.event.KeyListener.*;
+import java.awt.event.MouseEvent.*;
+import java.awt.event.MouseListener.*;
+import java.awt.event.MouseMotionListener.*;
+import java.awt.Component.*;
+import java.awt.Frame.*;
+import javax.swing.*;
+import java.lang.*;
+import java.lang.Object.*;
+import java.awt.Toolkit.*;
+import java.awt.image.*;
+import javax.imageio.ImageIO;
+
+public class EnterWorldObject {
+   
+   public void Intro () {
+     // DrawingPanel panel = new DrawingPanel(700, 700);
+      JFrame frame = new JFrame();
+      frame.setVisible(true);
+      frame.setBackground(Color.BLACK);
+      frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+      //Graphics g = panel.getGraphics();
+      Graphics fg = frame.getGraphics();
+      frame.setLocation(600, 100);
+      frame.setSize(700, 700);
+      try {
+      BufferedImage hi = ImageIO.read(new File("world.jpg"));
+      fg.drawImage(hi, 0, 0, 700, 700, Color.BLACK, null);
+     // g.drawImage(hi, 0, 0, 700, 700, null);
+      } 
+      catch (IOException e) {
+         System.out.println(e);
+      }
+   }
+
+}
