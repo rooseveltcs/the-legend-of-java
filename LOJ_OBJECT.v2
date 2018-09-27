@@ -17,27 +17,51 @@ import java.lang.Object.*;
 import java.awt.Toolkit.*;
 import java.awt.image.*;
 import javax.imageio.ImageIO;
+import javax.swing.text.JTextComponent;
 
 public class EnterWorldObject {
-   
+int Count = 0;
    public void Intro () {
-     // DrawingPanel panel = new DrawingPanel(700, 700);
-      JFrame frame = new JFrame();
+      MainFrame frame = new MainFrame();
+      JPanel panel = new JPanel();
+      panel.setName("What is the pAssWord?");
+      JPasswordField password = new JPasswordField(8);
+      JLabel label = new JLabel("Please Enter password: ");
+      label.setLabelFor(password);
+      label.setVisible(true);
+      password.setBackground(Color.WHITE);
+      password.setVisible(true);
+      password.addKeyListener(new KeyListener() {
+         public void keyTyped(KeyEvent e) {
+
+
+         }
+         public void keyPressed(KeyEvent e) {;
+            if (e.getKeyCode()==KeyEvent.VK_ENTER) {
+               if (String.valueOf(password.getPassword()).equals("password")){
+                  JOptionPane.showMessageDialog(null, "Ayyye nice job. Guess I can let you in now");
+                  panel.setVisible(false);
+                  frame.currentScreen.remove(panel);
+               } else {
+                  password.setText("");
+                  JOptionPane.showMessageDialog(null, "WRONG. TRY AGAIN.");
+               }
+            }
+         }
+         public void keyReleased(KeyEvent e) {
+
+         }
+      });
+      panel.add(password);
+      panel.add(label);
+      panel.setVisible(true);
+      panel.add(password);
+      frame.currentScreen.add(panel);
       frame.setVisible(true);
-      frame.setBackground(Color.BLACK);
-      frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-      //Graphics g = panel.getGraphics();
-      Graphics fg = frame.getGraphics();
-      frame.setLocation(600, 100);
-      frame.setSize(700, 700);
-      try {
-      BufferedImage hi = ImageIO.read(new File("world.jpg"));
-      fg.drawImage(hi, 0, 0, 700, 700, Color.BLACK, null);
-     // g.drawImage(hi, 0, 0, 700, 700, null);
-      } 
-      catch (IOException e) {
-         System.out.println(e);
-      }
+
+
    }
+
+
 
 }
