@@ -1,0 +1,17 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class MainFrame extends JFrame {
+public Screen currentScreen;
+    public MainFrame() {
+        setLocation(200, 100);
+        setSize(800, 800);
+        setBackground(Color.BLACK);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        currentScreen = new Screen();
+        add(currentScreen);
+    }
+
+
+
+}
